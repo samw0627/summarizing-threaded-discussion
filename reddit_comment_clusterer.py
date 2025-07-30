@@ -12,6 +12,7 @@ import numpy as np
 import re
 import argparse
 import sys
+import logging
 from typing import List, Dict, Tuple, Optional
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
@@ -22,6 +23,9 @@ import seaborn as sns
 from collections import Counter
 import warnings
 warnings.filterwarnings('ignore')
+
+# Set up logging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class RedditCommentClusterer:
     def __init__(self, min_clusters: int = 2, max_clusters: int = 15, random_state: int = 42):
@@ -53,28 +57,42 @@ class RedditCommentClusterer:
         Returns:
             Cleaned text
         """
-        if pd.isna(text) or text == '':
+        logging.debug(f"preprocess_text called with: {repr(text)} (type: {type(text)})")
+        
+        if text is None or pd.isna(text) or text == '':
+            logging.debug("Text is None, NaN, or empty - returning empty string")
             return ''
+        
+        try:
+            # Convert to lowercase
+            logging.debug("Converting to lowercase")
+            text = text.lower()
             
-        # Convert to lowercase
-        text = text.lower()
-        
-        # Remove URLs
-        text = re.sub(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', '', text)
-        
-        # Remove Reddit-specific formatting
-        text = re.sub(r'/u/\w+', '', text)  # Remove user mentions
-        text = re.sub(r'/r/\w+', '', text)  # Remove subreddit mentions
-        text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)  # Remove bold formatting
-        text = re.sub(r'\*([^*]+)\*', r'\1', text)  # Remove italic formatting
-        
-        # Remove special characters but keep spaces and basic punctuation
-        text = re.sub(r'[^\w\s.,!?-]', ' ', text)
-        
-        # Remove extra whitespace
-        text = re.sub(r'\s+', ' ', text).strip()
-        
-        return text
+            # Remove URLs
+            logging.debug("Removing URLs")
+            text = re.sub(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', '', text)
+            
+            # Remove Reddit-specific formatting
+            logging.debug("Removing Reddit formatting")
+            text = re.sub(r'/u/\w+', '', text)  # Remove user mentions
+            text = re.sub(r'/r/\w+', '', text)  # Remove subreddit mentions
+            text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)  # Remove bold formatting
+            text = re.sub(r'\*([^*]+)\*', r'\1', text)  # Remove italic formatting
+            
+            # Remove special characters but keep spaces and basic punctuation
+            logging.debug("Removing special characters")
+            text = re.sub(r'[^\w\s.,!?-]', ' ', text)
+            
+            # Remove extra whitespace
+            logging.debug("Removing extra whitespace")
+            text = re.sub(r'\s+', ' ', text).strip()
+            
+            logging.debug(f"Preprocessed text result: {repr(text)}")
+            return text
+            
+        except Exception as e:
+            logging.error(f"Error in preprocess_text: {e}, input was: {repr(text)} (type: {type(text)})")
+            raise
     
     def load_comments_from_csv(self, csv_file: str) -> pd.DataFrame:
         """
@@ -86,34 +104,54 @@ class RedditCommentClusterer:
         Returns:
             DataFrame with processed comments
         """
-        df = pd.read_csv(csv_file)
+        logging.info(f"Loading CSV file: {csv_file}")
         
-        # Extract comment text from the level columns
-        level_columns = [col for col in df.columns if col.startswith('level_')]
-        
-        # Combine all comment text from different nesting levels
-        comments = []
-        for idx, row in df.iterrows():
-            comment_text = ''
-            for col in level_columns:
-                if pd.notna(row[col]) and row[col] != '':
-                    comment_text = row[col]
-                    break
+        try:
+            df = pd.read_csv(csv_file)
+            logging.info(f"CSV loaded successfully. Shape: {df.shape}")
+            logging.debug(f"CSV columns: {df.columns.tolist()}")
             
-            if comment_text and comment_text.strip():
-                comment_data = {
-                    'original_index': idx,
-                    'comment_text': comment_text,
-                    'author': row.get('author', 'unknown'),
-                    'score': row.get('score', 0),
-                    'created_utc': row.get('created_utc', 0),
-                    'comment_id': row.get('comment_id', ''),
-                    'parent_id': row.get('parent_id', ''),
-                    'depth': self._get_comment_depth(row, level_columns)
-                }
-                comments.append(comment_data)
-        
-        return pd.DataFrame(comments)
+            # Extract comment text from the level columns
+            level_columns = [col for col in df.columns if col.startswith('level_')]
+            logging.info(f"Found level columns: {level_columns}")
+            
+            # Combine all comment text from different nesting levels
+            comments = []
+            for idx, row in df.iterrows():
+                logging.debug(f"Processing row {idx}")
+                comment_text = ''
+                
+                for col in level_columns:
+                    cell_value = row[col]
+                    logging.debug(f"  Checking column {col}: {repr(cell_value)} (type: {type(cell_value)})")
+                    
+                    if pd.notna(cell_value) and cell_value != '':
+                        comment_text = cell_value
+                        logging.debug(f"  Found comment text in {col}: {repr(comment_text)}")
+                        break
+                
+                if comment_text and str(comment_text).strip():
+                    logging.debug(f"  Adding comment: {repr(comment_text)}")
+                    comment_data = {
+                        'original_index': idx,
+                        'comment_text': comment_text,
+                        'author': row.get('author', 'unknown'),
+                        'score': row.get('score', 0),
+                        'created_utc': row.get('created_utc', 0),
+                        'comment_id': row.get('comment_id', ''),
+                        'parent_id': row.get('parent_id', ''),
+                        'depth': self._get_comment_depth(row, level_columns)
+                    }
+                    comments.append(comment_data)
+                else:
+                    logging.debug(f"  Skipping row {idx} - no valid comment text")
+            
+            logging.info(f"Extracted {len(comments)} valid comments from {len(df)} rows")
+            return pd.DataFrame(comments)
+            
+        except Exception as e:
+            logging.error(f"Error loading CSV file: {e}")
+            raise
     
     def _get_comment_depth(self, row: pd.Series, level_columns: List[str]) -> int:
         """Get the depth/nesting level of a comment."""
@@ -132,25 +170,45 @@ class RedditCommentClusterer:
         Returns:
             TF-IDF feature matrix
         """
+        logging.info(f"vectorize_comments called with {len(comments)} comments")
+        
         # Filter out empty comments
-        valid_comments = [comment for comment in comments if comment and comment.strip()]
+        logging.debug("Filtering out empty comments")
+        valid_comments = []
+        for i, comment in enumerate(comments):
+            logging.debug(f"Comment {i}: {repr(comment)} (type: {type(comment)})")
+            if comment and str(comment).strip():
+                valid_comments.append(comment)
+            else:
+                logging.debug(f"  Filtered out comment {i}")
+        
+        logging.info(f"After filtering: {len(valid_comments)} valid comments")
         
         if len(valid_comments) < 2:
             raise ValueError("Need at least 2 valid comments for clustering")
         
-        # Initialize TF-IDF vectorizer
-        self.vectorizer = TfidfVectorizer(
-            max_features=1000,  # Limit to top 1000 features
-            stop_words='english',
-            ngram_range=(1, 2),  # Use unigrams and bigrams
-            min_df=2,  # Ignore terms that appear in less than 2 documents
-            max_df=0.95  # Ignore terms that appear in more than 95% of documents
-        )
-        
-        # Fit and transform the comments
-        self.feature_matrix = self.vectorizer.fit_transform(valid_comments)
-        
-        return self.feature_matrix
+        try:
+            # Initialize TF-IDF vectorizer
+            logging.info("Initializing TF-IDF vectorizer")
+            self.vectorizer = TfidfVectorizer(
+                max_features=1000,  # Limit to top 1000 features
+                stop_words='english',
+                ngram_range=(1, 2),  # Use unigrams and bigrams
+                min_df=2,  # Ignore terms that appear in less than 2 documents
+                max_df=0.95  # Ignore terms that appear in more than 95% of documents
+            )
+            
+            # Fit and transform the comments
+            logging.info("Fitting and transforming comments with TF-IDF")
+            self.feature_matrix = self.vectorizer.fit_transform(valid_comments)
+            logging.info(f"Feature matrix created with shape: {self.feature_matrix.shape}")
+            
+            return self.feature_matrix
+            
+        except Exception as e:
+            logging.error(f"Error in vectorize_comments: {e}")
+            logging.error(f"Valid comments sample: {valid_comments[:5]}")
+            raise
     
     def find_optimal_clusters(self, feature_matrix: np.ndarray) -> int:
         """
@@ -162,65 +220,116 @@ class RedditCommentClusterer:
         Returns:
             Optimal number of clusters
         """
-        max_k = min(self.max_clusters, feature_matrix.shape[0] - 1)
+        logging.info(f"find_optimal_clusters called with feature_matrix shape: {feature_matrix.shape}")
         
-        if max_k < self.min_clusters:
-            print(f"Warning: Not enough comments for clustering. Using {max_k} clusters.")
-            return max_k
-        
-        inertias = []
-        silhouette_scores = []
-        k_range = range(self.min_clusters, max_k + 1)
-        
-        for k in k_range:
-            kmeans = KMeans(n_clusters=k, random_state=self.random_state, n_init=10)
-            cluster_labels = kmeans.fit_predict(feature_matrix)
+        try:
+            max_k = min(self.max_clusters, feature_matrix.shape[0] - 1)
+            logging.info(f"max_k calculated as: {max_k}")
             
-            inertias.append(kmeans.inertia_)
+            if max_k < self.min_clusters:
+                logging.warning(f"Not enough comments for clustering. Using {max_k} clusters.")
+                print(f"Warning: Not enough comments for clustering. Using {max_k} clusters.")
+                return max_k
             
-            if len(set(cluster_labels)) > 1:  # Need at least 2 clusters for silhouette score
-                sil_score = silhouette_score(feature_matrix, cluster_labels)
-                silhouette_scores.append(sil_score)
-            else:
-                silhouette_scores.append(0)
-        
-        # Find elbow point
-        optimal_k = self._find_elbow_point(k_range, inertias)
-        
-        # Validate with silhouette score
-        if silhouette_scores:
-            best_sil_k = k_range[np.argmax(silhouette_scores)]
-            print(f"Elbow method suggests {optimal_k} clusters")
-            print(f"Best silhouette score at {best_sil_k} clusters ({max(silhouette_scores):.3f})")
+            inertias = []
+            silhouette_scores = []
+            k_range = range(self.min_clusters, max_k + 1)
+            logging.info(f"Testing k values: {list(k_range)}")
             
-            # Use silhouette score if significantly better
-            if max(silhouette_scores) > 0.3 and abs(best_sil_k - optimal_k) <= 2:
-                optimal_k = best_sil_k
-        
-        return optimal_k
+            for k in k_range:
+                logging.debug(f"Testing k={k}")
+                try:
+                    kmeans = KMeans(n_clusters=k, random_state=self.random_state, n_init=10)
+                    logging.debug(f"Created KMeans object for k={k}")
+                    
+                    cluster_labels = kmeans.fit_predict(feature_matrix)
+                    logging.debug(f"fit_predict completed for k={k}, labels shape: {cluster_labels.shape}")
+                    
+                    inertias.append(kmeans.inertia_)
+                    logging.debug(f"Inertia for k={k}: {kmeans.inertia_}")
+                    
+                    if len(set(cluster_labels)) > 1:  # Need at least 2 clusters for silhouette score
+                        logging.debug(f"Calculating silhouette score for k={k}")
+                        sil_score = silhouette_score(feature_matrix, cluster_labels)
+                        silhouette_scores.append(sil_score)
+                        logging.debug(f"Silhouette score for k={k}: {sil_score}")
+                    else:
+                        silhouette_scores.append(0)
+                        logging.debug(f"Only one cluster for k={k}, using silhouette score 0")
+                        
+                except Exception as e:
+                    logging.error(f"Error testing k={k}: {e}")
+                    raise
+            
+            logging.info("Finding elbow point")
+            # Find elbow point
+            optimal_k = self._find_elbow_point(k_range, inertias)
+            logging.info(f"Elbow point found at k={optimal_k}")
+            
+            # Validate with silhouette score
+            if silhouette_scores:
+                best_sil_k = k_range[np.argmax(silhouette_scores)]
+                logging.info(f"Best silhouette score at k={best_sil_k}")
+                print(f"Elbow method suggests {optimal_k} clusters")
+                print(f"Best silhouette score at {best_sil_k} clusters ({max(silhouette_scores):.3f})")
+                
+                # Use silhouette score if significantly better
+                if max(silhouette_scores) > 0.3 and abs(best_sil_k - optimal_k) <= 2:
+                    optimal_k = best_sil_k
+                    logging.info(f"Using silhouette-based optimal k={optimal_k}")
+            
+            return optimal_k
+            
+        except Exception as e:
+            logging.error(f"Error in find_optimal_clusters: {e}")
+            raise
     
     def _find_elbow_point(self, k_range: range, inertias: List[float]) -> int:
         """Find the elbow point in the inertia curve."""
-        if len(inertias) < 3:
-            return k_range[0]
+        logging.debug(f"_find_elbow_point called with k_range: {list(k_range)}, inertias: {inertias}")
         
-        # Calculate the rate of change
-        changes = []
-        for i in range(1, len(inertias)):
-            changes.append(inertias[i-1] - inertias[i])
-        
-        # Find the point where the rate of change decreases most
-        if len(changes) > 1:
-            second_changes = []
-            for i in range(1, len(changes)):
-                second_changes.append(changes[i-1] - changes[i])
+        try:
+            if len(inertias) < 3:
+                logging.debug("Less than 3 inertias, returning first k value")
+                return list(k_range)[0]
             
-            if second_changes:
-                elbow_idx = np.argmax(second_changes) + 2  # +2 because of indexing offset
-                return list(k_range)[min(elbow_idx, len(k_range) - 1)]
-        
-        # Fallback: use middle of range
-        return list(k_range)[len(k_range) // 2]
+            # Calculate the rate of change
+            logging.debug("Calculating rate of change")
+            changes = []
+            for i in range(1, len(inertias)):
+                change = inertias[i-1] - inertias[i]
+                changes.append(change)
+                logging.debug(f"Change {i}: {change}")
+            
+            # Find the point where the rate of change decreases most
+            if len(changes) > 1:
+                logging.debug("Calculating second-order changes")
+                second_changes = []
+                for i in range(1, len(changes)):
+                    second_change = changes[i-1] - changes[i]
+                    second_changes.append(second_change)
+                    logging.debug(f"Second change {i}: {second_change}")
+                
+                if second_changes:
+                    elbow_idx = np.argmax(second_changes) + 2  # +2 because of indexing offset
+                    k_range_list = list(k_range)
+                    result_idx = min(elbow_idx, len(k_range_list) - 1)
+                    result = k_range_list[result_idx]
+                    logging.debug(f"Elbow point found at index {elbow_idx}, returning k={result}")
+                    return result
+            
+            # Fallback: use middle of range
+            k_range_list = list(k_range)
+            fallback_idx = len(k_range_list) // 2
+            result = k_range_list[fallback_idx]
+            logging.debug(f"Using fallback middle value: k={result}")
+            return result
+            
+        except Exception as e:
+            logging.error(f"Error in _find_elbow_point: {e}")
+            logging.error(f"k_range: {k_range} (type: {type(k_range)})")
+            logging.error(f"inertias: {inertias} (type: {type(inertias)})")
+            raise
     
     def cluster_comments(self, feature_matrix: np.ndarray, n_clusters: Optional[int] = None) -> np.ndarray:
         """
@@ -233,22 +342,34 @@ class RedditCommentClusterer:
         Returns:
             Cluster labels
         """
-        if n_clusters is None:
-            n_clusters = self.find_optimal_clusters(feature_matrix)
+        logging.info(f"cluster_comments called with feature_matrix shape: {feature_matrix.shape}")
         
-        self.optimal_k = n_clusters
-        
-        # Perform K-means clustering
-        self.kmeans = KMeans(
-            n_clusters=n_clusters,
-            random_state=self.random_state,
-            n_init=10,
-            max_iter=300
-        )
-        
-        self.cluster_labels = self.kmeans.fit_predict(feature_matrix)
-        
-        return self.cluster_labels
+        try:
+            if n_clusters is None:
+                logging.info("Finding optimal number of clusters")
+                n_clusters = self.find_optimal_clusters(feature_matrix)
+            
+            logging.info(f"Using {n_clusters} clusters")
+            self.optimal_k = n_clusters
+            
+            # Perform K-means clustering
+            logging.info("Initializing K-means")
+            self.kmeans = KMeans(
+                n_clusters=n_clusters,
+                random_state=self.random_state,
+                n_init=10,
+                max_iter=300
+            )
+            
+            logging.info("Fitting K-means and predicting clusters")
+            self.cluster_labels = self.kmeans.fit_predict(feature_matrix)
+            logging.info(f"Clustering complete. Labels shape: {self.cluster_labels.shape}")
+            
+            return self.cluster_labels
+            
+        except Exception as e:
+            logging.error(f"Error in cluster_comments: {e}")
+            raise
     
     def extract_topic_keywords(self, n_keywords: int = 10) -> Dict[int, List[str]]:
         """
@@ -260,19 +381,43 @@ class RedditCommentClusterer:
         Returns:
             Dictionary mapping cluster ID to list of keywords
         """
+        logging.info(f"extract_topic_keywords called with n_keywords={n_keywords}")
+        
         if self.kmeans is None or self.vectorizer is None:
             raise ValueError("Must run clustering before extracting keywords")
         
-        feature_names = self.vectorizer.get_feature_names_out()
-        cluster_centers = self.kmeans.cluster_centers_
-        
-        for cluster_id in range(len(cluster_centers)):
-            # Get top feature indices for this cluster
-            top_indices = cluster_centers[cluster_id].argsort()[-n_keywords:][::-1]
-            top_keywords = [feature_names[i] for i in top_indices]
-            self.topic_keywords[cluster_id] = top_keywords
-        
-        return self.topic_keywords
+        try:
+            logging.info("Getting feature names from vectorizer")
+            feature_names = self.vectorizer.get_feature_names_out()
+            logging.debug(f"Feature names type: {type(feature_names)}, sample: {feature_names[:10] if len(feature_names) > 0 else 'empty'}")
+            
+            logging.info("Getting cluster centers")
+            cluster_centers = self.kmeans.cluster_centers_
+            logging.info(f"Cluster centers shape: {cluster_centers.shape}")
+            
+            for cluster_id in range(len(cluster_centers)):
+                logging.debug(f"Processing cluster {cluster_id}")
+                # Get top feature indices for this cluster
+                top_indices = cluster_centers[cluster_id].argsort()[-n_keywords:][::-1]
+                logging.debug(f"Top indices for cluster {cluster_id}: {top_indices}")
+                
+                top_keywords = []
+                for i in top_indices:
+                    keyword = feature_names[i]
+                    logging.debug(f"  Feature {i}: {repr(keyword)} (type: {type(keyword)})")
+                    top_keywords.append(keyword)
+                
+                self.topic_keywords[cluster_id] = top_keywords
+                logging.debug(f"Keywords for cluster {cluster_id}: {top_keywords}")
+            
+            logging.info(f"Topic keywords extraction complete: {len(self.topic_keywords)} clusters")
+            return self.topic_keywords
+            
+        except Exception as e:
+            logging.error(f"Error in extract_topic_keywords: {e}")
+            logging.error(f"kmeans: {self.kmeans}")
+            logging.error(f"vectorizer: {self.vectorizer}")
+            raise
     
     def create_results_dataframe(self, df: pd.DataFrame) -> pd.DataFrame:
         """
@@ -381,7 +526,14 @@ def main():
         print(f"Loaded {len(df)} comments")
         
         # Preprocess and vectorize
-        preprocessed_comments = [clusterer.preprocess_text(text) for text in df['comment_text']]
+        logging.info("Starting text preprocessing")
+        preprocessed_comments = []
+        for i, text in enumerate(df['comment_text']):
+            logging.debug(f"Preprocessing comment {i}: {repr(text)}")
+            processed = clusterer.preprocess_text(text)
+            preprocessed_comments.append(processed)
+        
+        logging.info(f"Preprocessing complete. Got {len(preprocessed_comments)} processed comments")
         feature_matrix = clusterer.vectorize_comments(preprocessed_comments)
         
         print(f"Created feature matrix with {feature_matrix.shape[1]} features")
