@@ -1,0 +1,613 @@
+[
+  {
+    "cluster": 0,
+    "theme": "\"Navigating Complex Discussions\"",
+    "statements": {
+      "statements": [
+        {
+          "statement": "Political absurdity has increased since Bill Clinton, but other nations have improved.",
+          "excerpts": [
+            "There's a progression from I think Bill Clinton onwards of it becoming increasingly silly.",
+            "That said America isn't the only nation on earth and in the same time period other nations have gotten better."
+          ]
+        },
+        {
+          "statement": "The reliance on AI reduces critical thinking in our interactions.",
+          "excerpts": [
+            "Isn't the point of trust to save mental energy ?",
+            "Yeah who would ever want to waste mental energy on (checks notes) critical thinking?"
+          ]
+        },
+        {
+          "statement": "Cognitive offloading helps save time but may undermine critical engagement.",
+          "excerpts": [
+            "Thank for explaining what cognitive offloading in your post.",
+            "You saved us some time by not clicking that article"
+          ]
+        },
+        {
+          "statement": "Collaborative teamwork can create uncritical environments.",
+          "excerpts": [
+            "Better watch out for those supportive groups and their teamwork /s"
+          ]
+        },
+        {
+          "statement": "Engaging with AI prompts deeper reflections on human dynamics.",
+          "excerpts": [
+            "might this mirror a human dynamic between long term partners?"
+          ]
+        },
+        {
+          "statement": "AI tools are invaluable in synthesizing information quickly.",
+          "excerpts": [
+            "it saves so much time on trawling through the documents.",
+            "I can spend the cognition on other things like synthesis."
+          ]
+        },
+        {
+          "statement": "AI can support individuals with cognitive disabilities.",
+          "excerpts": [
+            "We could also reframe this and talk about how it helps people with cognitive disabilities."
+          ]
+        },
+        {
+          "statement": "The irony in AI's analytical capabilities adds a valuable perspective.",
+          "excerpts": [
+            "The irony is useful.",
+            "The outpost was very interesting and valuable."
+          ]
+        }
+      ],
+      "comments": [
+        {
+          "comment_id": "mj7xvmq",
+          "comment": "I didn't notice that. I think I'll ask chatgpt."
+        },
+        {
+          "comment_id": "mj2hva3",
+          "comment": "It worsens the problem."
+        },
+        {
+          "comment_id": "miz1g6f",
+          "comment": "The AI is fighting back, feisty!"
+        },
+        {
+          "comment_id": "mj0gdye",
+          "comment": "There's a progression from I think Bill Clinton onwards of it becoming increasingly silly. That said America isn't the only nation on earth and in the same time period other nations have gotten better."
+        },
+        {
+          "comment_id": "miyyft1",
+          "comment": "I was accused so often of using AI to write my reddit comments that I had to start making them heaps shorter and less comprehensive. I also made use of slang so I can look more human..."
+        },
+        {
+          "comment_id": "miynnjv",
+          "comment": "I did it manually although it was mainly copy and pasting from the source material."
+        },
+        {
+          "comment_id": "mj2f74z",
+          "comment": "What about the Cyrillic one?"
+        },
+        {
+          "comment_id": "mj42em9",
+          "comment": "So satan can enter the equation obviously!"
+        },
+        {
+          "comment_id": "miyrxmr",
+          "comment": "Thank for explaining what cognitive offloading in your post. You saved us some time by not clicking that article"
+        },
+        {
+          "comment_id": "mj2pffl",
+          "comment": "> Isn't the point of trust to save mental energy ?\n\nYeah who would ever want to waste mental energy on (checks notes) critical thinking?"
+        },
+        {
+          "comment_id": "mj1d3gm",
+          "comment": "Okay, but like... it saves so much time on trawling through the documents. I can spend the cognition on other things like synthesis."
+        },
+        {
+          "comment_id": "mj390c0",
+          "comment": "And collaborative team work. Better watch out for those supportive groups and their teamwork /s"
+        },
+        {
+          "comment_id": "mizfsl6",
+          "comment": "I\u2019m not sure what to think about this article - better ask ChatGPT\u2026"
+        },
+        {
+          "comment_id": "mizibjj",
+          "comment": "\u2026 might this mirror a human dynamic between long term partners?"
+        },
+        {
+          "comment_id": "miz5w5y",
+          "comment": "We could also reframe this and talk about how it helps people with cognitive disabilities."
+        },
+        {
+          "comment_id": "mj32utl",
+          "comment": "As a side note, I put this study hypothesis into ChatGPT and asked it to provide the pro\u2019s and con\u2019s in a balanced approach across a long-term society-wide timeframe.\n\nThe outpost was very interesting and valuable. Gave me a lot to think about. Critically, and otherwise.\n\nThe irony is useful."
+        }
+      ]
+    }
+  },
+  {
+    "cluster": 1,
+    "theme": "\"Accessibility Challenges in Seattle\"",
+    "statements": {
+      "statements": [
+        {
+          "statement": "AI tools can diminish critical thinking in users, amplifying cognitive offloading.",
+          "excerpts": [
+            "People who used AI tools more frequently demonstrated weaker critical thinking abilities, largely due to a cognitive phenomenon known as cognitive offloading.",
+            "This pattern suggests that AI tools may be reducing the need for individuals to engage in independent analysis and evaluation."
+          ]
+        },
+        {
+          "statement": "A reliance on AI may result in a generation that struggles with critical analysis and evaluation.",
+          "excerpts": [
+            "Younger participants exhibited higher dependence on AI tools and lower critical thinking scores compared to older participants."
+          ]
+        },
+        {
+          "statement": "Using AI requires a cautious approach to trust and verification.",
+          "excerpts": [
+            "Do you trust everything you read on the Internet?",
+            "But do you trust everything you read on the Internet? Because there's a Nigerian prince trying to give you money."
+          ]
+        },
+        {
+          "statement": "Educational strategies must adapt to foster critical thinking in an AI-driven landscape.",
+          "excerpts": [
+            "These results highlight the potential cognitive costs of AI tool reliance, emphasising the need for educational strategies that promote critical engagement with AI technologies."
+          ]
+        },
+        {
+          "statement": "The credibility of studies is vital for trust in findings and recommendations.",
+          "excerpts": [
+            "666 participants... why",
+            "666 participants - bullshit"
+          ]
+        }
+      ],
+      "comments": [
+        {
+          "comment_id": "mj16ieu",
+          "comment": "How do you make them think critically while using AI?"
+        },
+        {
+          "comment_id": "mj04w97",
+          "comment": "But these are precisely the days of the AI\n\nIt\u2019s no wonder that as AI improved, politics and humanity in general got more ridiculous and 'reality tv' like"
+        },
+        {
+          "comment_id": "mizkpeh",
+          "comment": "If 'cognitive offloading' is trust, then 'critical thinking' would be a measure of gullibility. You probably trust your watch and car because you understand a degree of how they work, know that they've been through quality testing, and know others find them reliable. But do you trust everything you read on the Internet? Because there's a Nigerian prince trying to give you money, and his words may be included in your AI's training dataset."
+        },
+        {
+          "comment_id": "mizljq6",
+          "comment": "It was the same argument for Wikipedia before. But at the end, Wikipedia reliability is pretty high and the same goes for AI answers. I know that AI can still make mistake but like many users I find the risk/reward balance pretty satisfying when using AI."
+        },
+        {
+          "comment_id": "mizn9kl",
+          "comment": "This is why we hand over people calculators AFTER having taught them how to do maths without. What you are talking about is poor elementary school education."
+        },
+        {
+          "comment_id": "mj31xm2",
+          "comment": "Couldn\u2019t this be fixed with a simple prompt addition?\n\n\u201c<AI tool>, please answer in a way that ensures I am maintaining optimum cognitive engagement. I want to minimise the amount of cognitive offloading I pass to you whilst optimising my engagement with you.\u201d"
+        }
+      ]
+    }
+  },
+  {
+    "cluster": 2,
+    "theme": "\"Academic Struggles and Social Commentary\"",
+    "statements": {
+      "statements": [
+        {
+          "statement": "Overwhelming academic challenges led to quitting school.",
+          "excerpts": [
+            "Well I\u2019m stuck in the upper levels of blooms taxonomy so I quit school"
+          ]
+        },
+        {
+          "statement": "Skepticism arises regarding the linked document's content.",
+          "excerpts": [
+            "Suspicious indeed!"
+          ]
+        },
+        {
+          "statement": "Something presented is not humorous at all.",
+          "excerpts": [
+            "That isn't really funny."
+          ]
+        },
+        {
+          "statement": "Criticism of people focusing on annoying viral trends.",
+          "excerpts": [
+            "you are one of those folks who claim to hear yanny or some bullshit right. like flash mob of douchebags."
+          ]
+        },
+        {
+          "statement": "There's a strong resemblance to the movie WALL-E.",
+          "excerpts": [
+            "It\u2019s straight up WALL-E bro"
+          ]
+        },
+        {
+          "statement": "Sharing information with know-it-alls is unwise.",
+          "excerpts": [
+            "Don\u2019t tell the Reddit know it all"
+          ]
+        },
+        {
+          "statement": "The statement is frustratingly obvious.",
+          "excerpts": [
+            "No fucking shit"
+          ]
+        },
+        {
+          "statement": "Preferring Starbucks over reading shows disinterest.",
+          "excerpts": [
+            "Fuck reading this I\u2019m headed to Starbucks for a hand job."
+          ]
+        },
+        {
+          "statement": "Expressing enthusiasm can uplift the mood.",
+          "excerpts": [
+            "greaaaaaaaaaaaaat"
+          ]
+        }
+      ],
+      "comments": [
+        {
+          "comment_id": "mj1z6or",
+          "comment": "Well I\u2019m stuck in the upper levels of blooms taxonomy so I quit school"
+        },
+        {
+          "comment_id": "mj2oslg",
+          "comment": "https://escholarship.org/content/qt9nh5g464/qt9nh5g464_noSplash_8ed1c148bf4c8d1444c4374f4eb6f3dc.pdf?t=op2n22"
+        },
+        {
+          "comment_id": "mizl556",
+          "comment": "That isn't really funny."
+        },
+        {
+          "comment_id": "mnwny1s",
+          "comment": "you are one of those folks who claim to hear yanny or some bullshit right.  like flash mob of douchebags."
+        },
+        {
+          "comment_id": "miz8ddi",
+          "comment": "It\u2019s straight up WALL-E bro"
+        },
+        {
+          "comment_id": "miz7w3r",
+          "comment": "Don\u2019t tell the Reddit know it all"
+        },
+        {
+          "comment_id": "mizabt7",
+          "comment": "No fucking shit"
+        },
+        {
+          "comment_id": "mj0du57",
+          "comment": "Fuck reading this I\u2019m headed to Starbucks for a hand job."
+        },
+        {
+          "comment_id": "mj0ifmd",
+          "comment": "greaaaaaaaaaaaaat"
+        }
+      ]
+    }
+  },
+  {
+    "cluster": 3,
+    "theme": "\"Accessibility and Systemic Reform\"",
+    "statements": {
+      "statements": [
+        {
+          "statement": "The education system prioritizes memorization over critical thinking, stunting intellectual growth.",
+          "excerpts": [
+            "the education system in most countries incentivizes memorization rather than critical thinking",
+            "Students can regurgitate knowledge without a problem, but applying it in new situations or contexts.."
+          ]
+        },
+        {
+          "statement": "Dependence on technology is eroding foundational skills, leading to poorer cognitive outcomes.",
+          "excerpts": [
+            "Basic skills such as mathematics already suffer thanks to over-reliance on things like calculators",
+            "people don't remember phone numbers any more because of their availability in their phone"
+          ]
+        },
+        {
+          "statement": "Cognitive offloading undermines essential memory and problem-solving abilities in students.",
+          "excerpts": [
+            "The issue is contextual, it causes an issue when we want to recall the information or mental skill that is being offloaded.",
+            "I have students who will argue about taking notes because they can take pictures of the board with their phone."
+          ]
+        },
+        {
+          "statement": "Students face substantial barriers to learning and critical thinking due to educational shortcomings.",
+          "excerpts": [
+            "they avoid laying the foundations that they need over the next four years.",
+            "learning just to recite stuff by heart isn't really mastering the topic."
+          ]
+        },
+        {
+          "statement": "The quest for convenience is diminishing our capacity for deep analysis and intellectual engagement.",
+          "excerpts": [
+            "Google can also weaken critical thinking",
+            "I just want to get that email and report done. I don\u2019t care if I\u2019m getting dumber if I\u2019m still getting paid."
+          ]
+        },
+        {
+          "statement": "Reworking educational approaches is necessary to combat the decline of critical thinking skills.",
+          "excerpts": [
+            "We've avoided this problem by reworking all our tests into critical thinking applications.",
+            "It's a fun solution."
+          ]
+        }
+      ],
+      "comments": [
+        {
+          "comment_id": "mizsb7d",
+          "comment": "Oh, definitely. But it's getting worse. I'm a teacher at a university of applied sciences, and I've noticed a sharp decline in my students' problem solving and critical thinking skills. Students can regurgitate knowledge without a problem, but applying it in new situations or contexts.. That's a no go. And that means that they're progressing much, much slower than my previous cohorts of students. Thankfully, while it took us a while to adapt, but now we've found a way to train students to think critically while still allowing the use of AI. However, this has made our educational track a lot more difficult for some students who, previously, might still have eked by just by sheer force of will."
+        },
+        {
+          "comment_id": "mizvvmy",
+          "comment": "Tbh the education system in most countries incentivizes memorization rather than critical thinking in many areas, tests are all about remembering pointless information you will soon forget since you are not using it in any meaningful way. I am still gobsmacked by the fact that in some national exams at the end of high school you are meant to give very specific points and arguments to some pretty broad societal subjects rather than think on your own"
+        },
+        {
+          "comment_id": "mizzxz3",
+          "comment": "Oh, entirely true. And learning just to recite stuff by heart isn't really mastering the topic. I mean, then you're just stuck at the lower two levels of Bloom's taxonomy. In my specific case, we help students develop their cyber security knowledge, so then it's more relevant. Critical thinking and analysis is part of the core of our field. The moment students skip out on the first critical thinking exercises by resorting to Chatgpt, they avoid laying the foundations that they need over the next four years. We've avoided this problem by reworking all our tests into critical thinking applications. So they do verbal presentations, pressure cooker sessions where they need to apply their skills in new contexts, timed capture the flags on physical devices without access to the Internet, verbal assessments, they do classroom exercises where they give each other feedback and they brainstorm ideas together... It's a fun solution."
+        },
+        {
+          "comment_id": "miz0sza",
+          "comment": "\"cognitive offloading\" is just scientific gibberish for the concept of trust right ? Isn't the point of trust to save mental energy ? In that sense what is different with AI than all the others tools we use everyday ? I trust my watch, I trust the speed throttle of my car, is it bad ? Saving mental energy doesn't make you braindead. This energy is always reallocated to others tasks."
+        },
+        {
+          "comment_id": "mizk2m1",
+          "comment": "No. Its more related to your brain just not doing things because it knows the information or skill is readily available. People don't remember phone numbers any more because of their availability in their phone. People who film concerts on their phone have worse recall of the even than people who aren't filming"
+        },
+        {
+          "comment_id": "mizkvzz",
+          "comment": "Is it a problem ? We didn't erase phone numbers to replace them with nothing, we erase them because our brain memory capacity is already full and every day the brain chooses the memories to be kept or thrown away depending on its need. All those phone numbers are being replaced with more valuable memories."
+        },
+        {
+          "comment_id": "mj0cp3r",
+          "comment": "The issue is contextual, it causes an issue when we want to recall the information or mental skill that is being offloaded. We always have phones on us so memorizing numbers is unnecessary, but then we are often over confident on our recall when it is necessary. I have students who will argue about taking notes because they can take pictures of the board with their phone. A lot of students are given calculators so early that they never fully develop basic arithmetic skills and ends up increases the cognitive load in math as the progress through harder classes"
+        },
+        {
+          "comment_id": "mizlnq3",
+          "comment": "Basic skills such as mathematics already suffer thanks to over-reliance on things like calculators, no? I've met adults who have trouble multiplying by 10. There is such a thing as too much trust."
+        },
+        {
+          "comment_id": "mizax2c",
+          "comment": "[deleted]"
+        },
+        {
+          "comment_id": "mj0946z",
+          "comment": "Or the internet? Like before 1995 you basically had no option except to go to your professor for help or the library and spend hours going through books If you were in college. It's been 30 years and I would say that the Internet has expanded our ability for teaching greatly, not  dumbed it down."
+        },
+        {
+          "comment_id": "miyyks3",
+          "comment": "Uhh Google can also weaken critical thinking"
+        },
+        {
+          "comment_id": "miz19wk",
+          "comment": "Bro, I just want to get that email and report done. I don\u2019t care if I\u2019m getting dumber if I\u2019m still getting paid. Actually, getting dumber seems like a great deal nowadays."
+        },
+        {
+          "comment_id": "mj09pkh",
+          "comment": "Is it me or is \"cognitive offloading\" kind of an odd term? Like nobody talks like that about books, Google, the internet, watching a YouTube video, asking a friend/teacher, etc"
+        }
+      ]
+    }
+  },
+  {
+    "cluster": 4,
+    "theme": "Cognitive Offloading and Education Concerns",
+    "statements": {
+      "statements": [
+        {
+          "statement": "AI's reliance can gradually dismantle our critical thinking skills.",
+          "excerpts": [
+            "the difference here is that what's being offloaded is far more fundamental than keeping time",
+            "over reliance on AI can weaken critical thinking to a greater degree since it can do complex tasks"
+          ]
+        },
+        {
+          "statement": "Cognitive offloading may diminish our fundamental cognitive abilities.",
+          "excerpts": [
+            "we don't develop and strengthen those neurons",
+            "your brain quite literally becomes less capable at that task"
+          ]
+        },
+        {
+          "statement": "Excessive reliance on AI could lead to educational disengagement and dependence.",
+          "excerpts": [
+            "using AI to do the reading and then do the bulk of the writing",
+            "Students are removing themselves from the material entirely."
+          ]
+        },
+        {
+          "statement": "Trusting AI with cognitive tasks may result in intellectual laziness.",
+          "excerpts": [
+            "way too many people see it as an excuse to be lazy",
+            "the primary purpose I use AI for is literally to do critical thinking for fun"
+          ]
+        },
+        {
+          "statement": "AI's ethnocentric bias undermines serious analysis and understanding.",
+          "excerpts": [
+            "AI is sometimes not strong enough for some technical topics",
+            "its answers have an ethnocentered bias"
+          ]
+        },
+        {
+          "statement": "The balance between cognitive offloading and critical thinking must be navigated carefully.",
+          "excerpts": [
+            "it's about whether we consciously reinvest that energy",
+            "if the tool quietly shapes our thinking patterns without us noticing"
+          ]
+        },
+        {
+          "statement": "AI can enhance learning if applied actively, but passivity leads to poor thought.",
+          "excerpts": [
+            "It's fuck awful as a passive tool I think",
+            "AI can be a very useful tool for learning but it definitely needs to be used with the intent to do so critically"
+          ]
+        },
+        {
+          "statement": "The evolution of tools impacts our cognitive development significantly.",
+          "excerpts": [
+            "all technology has had this trade off",
+            "Like how reliance on cars impact us physically"
+          ]
+        },
+        {
+          "statement": "Memorization in education varies widely across cultures and systems.",
+          "excerpts": [
+            "a lot of your details vary a lot from teacher to teacher",
+            "some countries, like India focus super hard on memorization"
+          ]
+        }
+      ],
+      "comments": [
+        {
+          "comment_id": "mj04f4j",
+          "comment": "I don\u2019t disagree with you overall but a lot of your details vary a lot from teacher to teacher, some countries, like India focus super hard on memorization but that\u2019s not universal"
+        },
+        {
+          "comment_id": "mj14ag6",
+          "comment": "> we've found a way to train students to think critically while still allowing the use of AI Interesting - could you expand on that."
+        },
+        {
+          "comment_id": "mjhov1x",
+          "comment": "At a county library I saw high school kids asking Siri for the answers. We have entered the Wall-E stage."
+        },
+        {
+          "comment_id": "mjy883b",
+          "comment": "I work with graduate school interns\u2026teaching them critical thinking takes alot of critical thinking \ud83d\ude05\ud83e\udd17. Would love to know your method for effectively training students\u2019 critical thinking skills while still integrating AI?"
+        },
+        {
+          "comment_id": "mj1cbuy",
+          "comment": "I mentioned it in a different comment here. Our rubric assesses critical thinking, so our testing methods put students in a situation where they have to apply those skills. For example, for a written report, they might use AI to write the report, but the written report is an entry requirement for a verbal assessment. Once they clear that hurdle, they have to explain their reasoning for certain choices in the report, or explain logical structures. If they can do that, we ask them how designs or conclusions would change if certain conditions or circumstances would change. We ask them about conflicting conditions and guidelines, how they would navigate that, whether that would lead to complications in this situation... We do the same for coding. Sure, you might use AI to write the code, but then I manually change the data structures they use as input. Someone who wrote the code should, realistically, be able to adjust their entire program based my cues. Or I ask them to add a new method to their class, using specific inputs and outputs. We ask them why they used certain code structures, what the impact is on the functioning of the program, that sort of thing. So, long story short, they might use AI, but we don't assess students on the products they deliver, we assess them on their ability to apply the skills they needed to create those products in new situations."
+        },
+        {
+          "comment_id": "mj32qnt",
+          "comment": "It depends on the topic. AI is sometimes not strong enough for some technical topics. And about subjective/political/societal questions, it is supposed to share the different views on a same subject, to objectify its statements. But in reality, its answers have an ethnocentered bias and it is more often sharing common sense than a serious analysis on the topic. Talking about Wikip\u00e9dia or AI, the problem is not with the tool. The problem is some users don't know well the limitations of the tool. And in the case of AI use, they could think a well-shaped answer is a definitive truth, when it's sometimes controversial or inaccurate, but not presented this way by the AI."
+        },
+        {
+          "comment_id": "mj1e9ka",
+          "comment": "The difference here is that what's being offloaded is far more fundamental than keeping time, or even something like math or navigation. This has a direct impact on our basic reasoning and decision making capabilities. And no, it'd be more accurate to say that cognitive offloading refers to the *byproduct* of such trust. Your brain quite literally becomes less capable at that task, as it subconsciously determines it isn't necessary. Whatever your thoughts on AI, this should be concerning to everyone. Even if you were to feed it your every thought, and it were fully up to the task of parsing through it for you, there's still a crucial disconnect between its thoughts and your own."
+        },
+        {
+          "comment_id": "mj1t2v8",
+          "comment": "Using the word \"trust\" is weird to me. I think it's better to look at this from a neurological perspective. When you do something neurons are formed in your brain. Be it something mental, such as math, or physical, such as sports. You practice those things and your neurons get stronger. In the case of sports your muscles get stronger but also neurons that control those muscles, and through that your coordination. In the case of math the repeated practice of different equations strengthens the neurons responsible, which results in faster recognition of problems and their solutions. So what \"cognitive offloading\" does is instead of doing those calculations, that problem solving in your mind (and thus strengthening your problem solving neurons) you make AI solve it, and thus you don't develop and strengthen those neurons. Kind of like having a robot servant that carries your luggage, you won't develop your own muscles because you're not carrying the weight yourself."
+        },
+        {
+          "comment_id": "miz370j",
+          "comment": "I agree wirh you. Cognitive offloading at its core is a form of trust. We\u2019ve always relied on tools to save mental effort from watches to notebooks. But maybe the difference with AI isn\u2019t the offloading itself but how much of the decision making we\u2019re comfortable outsourcing without realizing it. Saving energy isn\u2019t bad, it\u2019s about whether we consciously reinvest that energy or if the tool quietly shapes our thinking patterns without us noticing."
+        },
+        {
+          "comment_id": "miz8fbp",
+          "comment": "How to tell a person that engages heavily in cognitive offloading! Seriously though, if you're always cognitive offloading, you won't develop knowledge and insights that helps to inform your views and reactions to the world properly. It's like been in a conversation and knowing that you could look up the location of paris, tokyo and their surrounding cities... and then not having the opportunity to do so without interrupting that conversation. Or worst yet, you don't even know what paris and tokyo are, and you don't know that there are surrounding cities - so you don't even understand the conversation at hand. In other words, you gotta know a few things so that you can think about those things and connect other things you might know to those things - that interconnected web of information makes a person knowledgeable, interesting and insightful. A person that eschews the work to create that interconnected web of knowledge is by contrast... ignorant, boring and dull. Speed of information access is important, and having it in your brain gives you the greatest speed and access to it. Something more simple like time or car speed can be offloaded to external mechanisms - especially when the cost of looking it up is small, it's reliable, and the cost of maintaining it cognitively, accurately is high."
+        },
+        {
+          "comment_id": "mj2xbfn",
+          "comment": "That is a fair point to an extent. I think if the demands of the huge spike in information processing required, just to navigate day to day, weren\u2019t so high, it would be a stronger argument. I went through an undergraduate mathematics degree, and the classes I did best in and remember the most from, are the ones where I wasn\u2019t forced to do tons of make work. The year I was finally allowed to submit code instead of line by line proofs, was when I was able to finally start understanding it. Was it because the fundamentals had been beaten into me first? I know that\u2019s the common argument. But let me tell you that the cognitive load of that schedule, of the world going on around us, everything; it really was just a blur of stress, hand cramps from being forced to manually write out everything, and doing just enough of what I was told so I wouldn\u2019t fail, so I\u2019d have enough time to move to the next thing that was on fire."
+        },
+        {
+          "comment_id": "mzj5t2g",
+          "comment": ">All those phone numbers are being replaced with more valuable memories. If we lose critical thinking do we also replace it with something more valuable? Is there even something more valuable?"
+        },
+        {
+          "comment_id": "miznvxm",
+          "comment": "And do you believe the people I mentioned having trouble with numbers would have the same difficulty *without* years and years of reliance on a mini computer instead of practice? Learning doesn't end in the schoolhouse, dude."
+        },
+        {
+          "comment_id": "mj7z82b",
+          "comment": "Do you think that if we taught children to use calculators in kindergarten instead of ever teaching them their multiplication tables that it wouldn\u2019t have any negative consequences"
+        },
+        {
+          "comment_id": "mj4sqbw",
+          "comment": "Yeah I feel like asking the AI to put the question into a scenario or case study can help with this, given the context. Immediately (and/or soon after learning) and repeatedly applying knowledge in the same \"session\" is a known way to reinforce it. AI gets a bad go but appropriately utilising it to the fullest can make it extremely powerful in a learning context."
+        },
+        {
+          "comment_id": "mizh5sy",
+          "comment": "I\u2019ve noticed this in the students at my school. Since we went to iPad learning so many can\u2019t even write their names. And they aren\u2019t spelling well or recalling anything. We have a few students who are from \u201cno screen households\u201d and they are much farther ahead. I can see AI as doing the same."
+        },
+        {
+          "comment_id": "mj0ddmq",
+          "comment": "I think it\u2019s quite different. Both with books and the internet you are still reading the information, and in turn writing your thesis / essay or what have you. This can often completely remove the student from the material entirely, whereas the internet did not do that. The internet just brought the information from the library into your bedroom. It outsourced the walking to the library and the using of the dewey decimal system. People might not be so great at finding their material in a library, but can still analyze the information and discuss it in a comprehensible way. If AI does your research and writes your paper, how do you then discuss the paper in a comprehensible way? I would liken it to the damage on a persons education by plagiarism, as that is a more apt comparison. Students are removing themselves from the material entirely."
+        },
+        {
+          "comment_id": "mjd76gn",
+          "comment": "I don't think books ever wrote themselves until recently."
+        },
+        {
+          "comment_id": "mj4k09j",
+          "comment": "This was my first thought. All technology has had this trade off. It impacts our evolution. Like how reliance on cars impact us physically because people walk much less. Or the reliance on the calculator to do math."
+        },
+        {
+          "comment_id": "miz67x9",
+          "comment": "AI can be a very useful tool for learning and understanding, but it definitely needs to be used with the intent to do so critically. I love using it to stress test my own ideas and find flaws in my thinking or explanations. I love drawing analogies to check my understanding and seeing if it can get back to the concept I'm explaining by feeding it my analogues or \"models\" of a concept I want to discuss. And whenever it gives me \"an answer\" or knowledge I didn't know before, I always stress test that in reverse.starting a new instance and seeing if it understands it's own idea. Sometimes it'll go \"never heard of that\" sometimes it confirms it and I can find more literature on it. But it's only a good tool if used actively."
+        },
+        {
+          "comment_id": "mj1zc3s",
+          "comment": "Most tech, including calculators, spreadsheets, online maps, etc., contributes to cognitive offloading. Google searches gives you information (and sometimes you could think of the info yourself), but generally you do something with it after you get the result. But over reliance on AI can weaken critical thinking to a greater degree since it can do complex tasks and the thinking for you, if you let it."
+        },
+        {
+          "comment_id": "mj0q2bj",
+          "comment": "Still has useful application for TBI, Alzheimer's and cognitive deficiencies."
+        },
+        {
+          "comment_id": "miz2nqu",
+          "comment": "I think this is for people who use it as a crutch and can\u2019t get much done without it. But maybe that over reliance is caused by underdeveloped critical thinking skills and not vice versa. I also use it to save time on emails but I\u2019ll eat paint before calling myself an \u201cAI artist\u201d or whatever lol."
+        },
+        {
+          "comment_id": "mizbpmt",
+          "comment": "I feel that when I\u2019m coding tbh. I\u2019m shit at it. Always have been. Only need to do it every once in a while. So using AI to help with the smaller things or when I\u2019m stumped/have a very specific problem with little documentation, I can crawl my way through it. But I\u2019ve also noticed that whenever I do this for any extended period of time, I start making some seriously egregious logical errors I wouldn\u2019t normally make. Stupid redundant code, silly mistakes, being confused by stuff I shouldn\u2019t be confused by. So anecdotally, this rings true."
+        },
+        {
+          "comment_id": "mizo9q1",
+          "comment": "If this is true for AI tools, I wonder if it's the same for certain types of leadership roles, to the extent that it might be a mechanism that leads to states like hubris."
+        },
+        {
+          "comment_id": "mizyroz",
+          "comment": "Isn't it crazy that we let other machines take over our own machine (body)? We are technologically extremist. I'm not a luddite but we are overrelying on this."
+        },
+        {
+          "comment_id": "mj7igju",
+          "comment": "Perhaps, but let\u2019s not pretend that the average person is a Mentat. Calculators and excel have made my mental math garbage but spreadsheets are so powerful for the average person."
+        },
+        {
+          "comment_id": "mj7tqk4",
+          "comment": "Glancing over the paper very quickly, this study was poorly conducted. Subjects\u2019 use of AI tools was not randomly assigned. The researchers basically conducted a survey finding a correlation between use of AI and cognitive abilities. But, a simpler explanation for their finding is this: people with stronger cognitive abilities are probably just less reliant on AI in the first place."
+        },
+        {
+          "comment_id": "mjevqv0",
+          "comment": "Honestly I wouldn't be surprised if it was true, way too many people see it as an excuse to be lazy, have you seen all those FB ads about it allowing you to cheat in school undetected in an attempt to get students to buy/subscribe to their services, or the other ones that say you can publish thousands of books every month all you have to do is let their AI program do all the work? AI needs severe restrictions and regulations."
+        },
+        {
+          "comment_id": "mjlas9k",
+          "comment": "Here come the dweebs to poke holes in this because they started dating their Ai app."
+        },
+        {
+          "comment_id": "mjo6es6",
+          "comment": "Not surprising, but we could already see that with the prevalence of nighttime news casting. People have been told how to think for almost 100 years. Radio was almost as bad before that. Print was somewhat ok, but still full of issues. Honestly? I think AI is useful for helping explain concepts I just don't understand. And for helping me edit emails and cover letters because I suck at setting tone."
+        },
+        {
+          "comment_id": "miz4s74",
+          "comment": "It's been almost two years since Chatgpt was introduced to the world. I'm glad there's studies being done on how AI has effected cognitive thinking. I still believe AI has created a more positive effect than negative effects. It would be interesting to see how AI therapy compares to human to human therapy."
+        },
+        {
+          "comment_id": "mizgq1n",
+          "comment": "Bruh, the primary purpose I use AI for is literally to do critical thinking for fun, it's the perfect tool for that."
+        },
+        {
+          "comment_id": "mj2gypc",
+          "comment": "So basically, you can\u2019t see the difference between access to knowledge and synthesis thereof? While all the things you\u2019ve mentioned help the former, AI actively shapes latter, which is where active cognitive skills come in to play."
+        },
+        {
+          "comment_id": "mj384r1",
+          "comment": "They said this about the eraser on the pencil. And pretty much every advance since then. What we actually do is apply our thinking skills to the areas that have not been automated."
+        }
+      ]
+    }
+  }
+]

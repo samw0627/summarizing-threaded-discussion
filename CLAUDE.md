@@ -4,10 +4,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Python-based Reddit discussion analysis toolkit with two main components:
+This is a Python-based Reddit discussion analysis toolkit for statement generation with the following key components:
 
 1. **Comment Scraper** (`reddit_nested_comments_scraper.py`): Extracts threaded discussions from Reddit and preserves their hierarchical nesting structure in CSV format
 2. **Comment Clusterer** (`reddit_comment_clusterer.py`): Applies unsupervised machine learning to cluster scraped comments by topics and exports results with topic keywords
+
+## Statement Generation Pipeline
+
+The following files are critical components in the statement generation process:
+
+### Core Pipeline Files
+- **`Scripts/reddit_nested_comments_scraper.py`**: Primary comment extraction tool that scrapes Reddit discussions while preserving thread hierarchy
+- **`Scripts/entity_extractor.py`**: Extracts key entities and keywords from comment datasets for topic identification
+- **`Scripts/entity_comment_filter.py`**: Filters comments based on entity relevance and importance thresholds
+- **`Scripts/flatten-discussin-space.py`**: Restructures threaded discussions by promoting entity-relevant subtrees for better analysis
+- **`Scripts/cluster_comment.py`**: Clusters comments with depth ≤ 2 using k-means for topic-based grouping
 
 ## Architecture
 

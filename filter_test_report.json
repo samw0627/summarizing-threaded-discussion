@@ -1,0 +1,73 @@
+{
+  "filtering_summary": {
+    "original_comments": 91,
+    "filtered_comments": 30,
+    "retention_rate": 0.32967032967032966,
+    "min_relevance_threshold": 0.2
+  },
+  "entity_distribution": {
+    "critical thinking": 14,
+    "ai tools": 4,
+    "cognitive offloading": 11,
+    "educational strategies": 1,
+    "peer-reviewed journal": 1,
+    "educational attainment": 1,
+    "education system": 1,
+    "memorization": 2,
+    "societal subjects": 1,
+    "graduate school interns": 1,
+    "bloom's taxonomy": 1,
+    "verbal assessments": 2,
+    "pressure cooker sessions": 1,
+    "classroom exercises": 1,
+    "information access": 1
+  },
+  "relevance_statistics": {
+    "mean_score": 0.7466666666666666,
+    "median_score": 0.9142857142857143,
+    "max_score": 1.0,
+    "min_score": 0.0
+  },
+  "top_relevant_entities": [
+    [
+      "critical thinking",
+      14
+    ],
+    [
+      "cognitive offloading",
+      11
+    ],
+    [
+      "ai tools",
+      4
+    ],
+    [
+      "memorization",
+      2
+    ],
+    [
+      "verbal assessments",
+      2
+    ],
+    [
+      "educational strategies",
+      1
+    ],
+    [
+      "peer-reviewed journal",
+      1
+    ],
+    [
+      "educational attainment",
+      1
+    ],
+    [
+      "education system",
+      1
+    ],
+    [
+      "societal subjects",
+      1
+    ]
+  ]
+}
