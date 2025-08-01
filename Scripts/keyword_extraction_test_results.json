@@ -1,0 +1,51 @@
+{
+  "overall_entities": {
+    "top_entities": {
+      "work from home": 9.0,
+      "productivity": 9.0,
+      "city employees": 8.0,
+      "in-person work": 8.0,
+      "work-life balance": 8.0,
+      "hybrid work": 7.0,
+      "collaboration": 7.0,
+      "mental health": 7.0,
+      "remote work statistics": 7.0,
+      "employee flexibility": 7.0,
+      "traffic congestion": 6.0,
+      "city hall": 6.0,
+      "employee retention": 6.0,
+      "meetings": 6.0,
+      "public sector": 6.0,
+      "employee surveys": 6.0,
+      "outsourcing": 5.0,
+      "camaraderie": 5.0,
+      "seattle": 5.0,
+      "political leadership": 5.0
+    },
+    "entity_frequencies": {
+      "work from home": 1.0,
+      "productivity": 1.0,
+      "city employees": 0.75,
+      "in-person work": 0.75,
+      "work-life balance": 0.75,
+      "hybrid work": 0.5,
+      "collaboration": 0.5,
+      "mental health": 0.5,
+      "remote work statistics": 0.5,
+      "employee flexibility": 0.5,
+      "traffic congestion": 0.25,
+      "city hall": 0.25,
+      "employee retention": 0.25,
+      "meetings": 0.25,
+      "public sector": 0.25,
+      "employee surveys": 0.25,
+      "outsourcing": 0.0,
+      "camaraderie": 0.0,
+      "seattle": 0.0,
+      "political leadership": 0.0,
+      "pensions": 0.0,
+      "remote collaboration tools": 0.0
+    },
+    "total_entities_extracted": 22
+  }
+}

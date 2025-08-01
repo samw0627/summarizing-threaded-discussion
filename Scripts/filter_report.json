@@ -1,0 +1,23 @@
+{
+  "filtering_summary": {
+    "original_comments": 47,
+    "filtered_comments": 1,
+    "retention_rate": 0.02127659574468085,
+    "min_relevance_threshold": 0.1
+  },
+  "entity_distribution": {
+    "ai tools": 1
+  },
+  "relevance_statistics": {
+    "mean_score": 0.7714285714285714,
+    "median_score": 0.7714285714285714,
+    "max_score": 0.7714285714285714,
+    "min_score": 0.7714285714285714
+  },
+  "top_relevant_entities": [
+    [
+      "ai tools",
+      1
+    ]
+  ]
+}
